@@ -17,6 +17,6 @@ ax.set_yticklabels(date, color='blue')
 ax.invert_yaxis()  # labels read top-to-bottom
 ax.set_xlabel("Temperature 'C", color='green')
 ax.set_title('Weather history of the USA in the last 8 days',
-             color='#28242b')
+             color='red')
 
 plt.show()
