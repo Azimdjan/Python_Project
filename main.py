@@ -1,6 +1,6 @@
-# import matplotlib.pyplot as plt
-# import numpy as np
-# import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 #
 # plt.rcdefaults()
 # fig, ax = plt.subplots()
@@ -23,13 +23,23 @@
 import sklearn
 from sklearn import tree
 # [height, weight, shoe size]
-print('Please, input the height, weight, and the shoe size parameters of the individual whose gender you want to predict')
-h = input('Input height ')
-w = input('Input weight ')
-s = input('Input shoe size ')
-x = [[180, 80, 42], [192, 90, 43], [165,65,38], [170,55,37], [200,100,45],[200, 70, 39]]
-y = ['male', 'male', 'female','female', 'male', 'female']
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+dataSet = pd.read_csv("Data/wa_weather_1944_till_2016.csv")
+x = [dataSet['daily_avg'], dataSet['min_temp_C']]
+y = dataSet['Year']
+# print('Please, input the height, weight, and the shoe size parameters of the individual whose gender you want to predict')
+# h = input('Input height ')
+# w = input('Input weight ')
+# s = input('Input shoe size ')
+h = input('Input daily degree: ')
+w = input('Input min_temp_C: ')
+# x = [[180, 80, 42], [192, 90, 43], [165,65,38], [170,55,37], [200,100,45],[200, 70, 39]]
+# y = ['male', 'male', 'female', 'female', 'male', 'female']
+# x = degrees
+# y = year
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(x,y)
-prediction = clf.predict([[h, w,s]])
+prediction = clf.predict([[h,w]])
 print(prediction)
