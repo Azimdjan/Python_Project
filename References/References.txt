@@ -1,0 +1,3 @@
+https://data.world/fivethirtyeight/us-weather-history -> KCLT.csv file
+blob:https://www.visualcrossing.com/0329b6d2-06a9-4dcc-b28e-28cd17f6fbd6 -> history_data.csv file
+https://download.data.world/file_download/damian-arntzen/west-aus-weather-1944-2016/wa_weather_1944_till_2016.csv
